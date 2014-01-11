@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>390</width>
+    <height>294</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>390</width>
+    <height>222</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>390</width>
+    <height>390</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>AC4 Save Backup</string>
+  </property>
+  <property name="locale">
+   <locale language="Russian" country="Belarus"/>
+  </property>
+  <widget class="QPushButton" name="selectFolderBackup">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>50</y>
+     <width>371</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:red;</string>
+   </property>
+   <property name="text">
+    <string>Выбрать папку куда сохранять бекапы</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="time">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>51</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>10</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="timeLabel">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>100</y>
+     <width>161</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>таймер бекапа</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="selectFolderSave">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>371</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color:red;</string>
+   </property>
+   <property name="text">
+    <string>Выбрать папку с сохранениями игры</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="toSave">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>250</y>
+     <width>171</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Сохранить сейчас</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="procent">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>250</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="procentLabel">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>220</y>
+     <width>211</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Проиденный процент:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>371</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Запустить автосохранение</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font:700 24px &quot;Arial&quot;;
+</string>
+   </property>
+   <property name="text">
+    <string>Начать бекапить</string>
+   </property>
+  </widget>
+ </widget>
+ <resources>
+  <include location="../../server/ok/img/inSprites/start.qrc"/>
+ </resources>
+ <connections/>
+</ui>
