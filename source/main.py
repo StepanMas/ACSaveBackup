@@ -16,7 +16,7 @@ if __name__ == "__main__":
 
 	widget.run(template)
 
-	myappid = 'csscodeRu.ac4.sb.1' # arbitrary string
+	myappid = 'csscodeRu.ac.sb.1' # arbitrary string
 	ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 	widget.show()

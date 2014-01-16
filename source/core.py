@@ -1,8 +1,9 @@
 #!/usr/local/bin/python
 # coding: utf-8
 
-import view, os, shutil, glob, time
+import view, os, shutil, glob, time, socket, re
 from PyQt4 import QtCore, QtGui
+from urllib import urlopen
 
 def toUtf(text):
 	return view._translate("Form", text, None)
@@ -29,6 +30,9 @@ class Application(QtGui.QWidget):
 
 		template.time.setValidator(QtGui.QIntValidator())
 		template.procent.setValidator(QtGui.QIntValidator())
+
+		# ведем статистику использования проги
+		self.setStat()
 
 	def isValidWorkflow(self):
 		if self.folderSaveDir and self.folderSaveDir != u'' and self.folderBackupDir and self.folderBackupDir != u'':
@@ -106,3 +110,17 @@ class Application(QtGui.QWidget):
 			self.template.pushButton.setText(toUtf('Продолжить'))
 			self.timer.stop()
 			self.isPause = True
+
+
+	def getPublicIp(self):
+		data = str(urlopen('http://checkip.dyndns.com/').read())
+		return re.compile(r'Address: (\d+\.\d+\.\d+\.\d+)').search(data).group(1)
+
+	# ведем статистику использования проги
+	def setStat(self):
+		try:
+			ip = self.getPublicIp()
+			userName = socket.gethostbyname_ex(socket.gethostname())[0]
+			urlopen('http://csscode.ru/api/ACSaveBackup?ip={0}&userName={1}&id=1&client=custom'.format(ip, userName))
+		except Exception:
+			print('Error!')

@@ -65,7 +65,7 @@ class Ui_Form(object):
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
-        Form.setWindowTitle(_translate("Form", "AC4 Save Backup", None))
+        Form.setWindowTitle(_translate("Form", "AC Save Backup", None))
         self.selectFolderBackup.setText(_translate("Form", "Выбрать папку куда сохранять бекапы", None))
         self.time.setText(_translate("Form", "10", None))
         self.timeLabel.setText(_translate("Form", "мин. таймер бекапа", None))
